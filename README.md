@@ -1,1 +1,1 @@
-# wyta
+# revenue-distribution-token wyta finance
