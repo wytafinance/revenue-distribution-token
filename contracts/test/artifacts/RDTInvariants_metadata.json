@@ -1,0 +1,631 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "log",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "log_address",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "log_bytes",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "log_bytes32",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"name": "log_int",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "val",
+						"type": "address"
+					}
+				],
+				"name": "log_named_address",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "val",
+						"type": "bytes"
+					}
+				],
+				"name": "log_named_bytes",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "val",
+						"type": "bytes32"
+					}
+				],
+				"name": "log_named_bytes32",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "int256",
+						"name": "val",
+						"type": "int256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "decimals",
+						"type": "uint256"
+					}
+				],
+				"name": "log_named_decimal_int",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "val",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "decimals",
+						"type": "uint256"
+					}
+				],
+				"name": "log_named_decimal_uint",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "int256",
+						"name": "val",
+						"type": "int256"
+					}
+				],
+				"name": "log_named_int",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "val",
+						"type": "string"
+					}
+				],
+				"name": "log_named_string",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "val",
+						"type": "uint256"
+					}
+				],
+				"name": "log_named_uint",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "log_string",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "log_uint",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "logs",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "IS_TEST",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "excludeContracts",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "excludedContracts_",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "excludeSenders",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "excludedSenders_",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "failed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "invariant_balanceOfAssets_gte_balanceOf",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "invariant_freeAssets_lte_totalAssets",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "invariant_freeAssets_lte_underlyingBalance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "invariant_issuanceRate_eq_zero_ifPostVesting",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "invariant_issuanceRate_gt_zero_ifMidVesting",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "invariant_sumBalanceOfAssets_eq_totalAssets",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "invariant_totalAssets_lte_underlyingBalance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "invariant_totalSupply_lte_totalAssets",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "invariant_totalSupply_times_exchangeRate_eq_totalAssets",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "setUp",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "targetContracts",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "targetedContracts_",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "targetSelectors",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "addr",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes4[]",
+								"name": "selectors",
+								"type": "bytes4[]"
+							}
+						],
+						"internalType": "struct InvariantTest.FuzzSelector[]",
+						"name": "targetedSelectors_",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "targetSenders",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "targetedSenders_",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/test/Invariants.t.sol": "RDTInvariants"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/RevenueDistributionToken.sol": {
+			"keccak256": "0x3476742b2f45dfbad264e58b6c818b9f5057922e3434ff5efedddff6457e1ce0",
+			"license": "AGPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://3d1420e470949e9dbf5ffa552b4cfff21dcd10ad84bf2c138c9abe476923cd83",
+				"dweb:/ipfs/QmaRec9DRwtuuN4qBxABmAu6ABPT3CLdy38gdpf1m5aG79"
+			]
+		},
+		"contracts/interfaces/IERC4626.sol": {
+			"keccak256": "0xda8327c5dacee8c853be870f3fc90c67e7351b242ca7317073d83032f034d8ed",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://fac8e65a2c903fe0e5f5b137166535d7908b81978c05457149c6bfbbb10a2120",
+				"dweb:/ipfs/QmSzcsy5PvbjNSzi6npx5vSXWwhvne2vZVgYZLmhcBWq4v"
+			]
+		},
+		"contracts/interfaces/IRevenueDistributionToken.sol": {
+			"keccak256": "0xb837508aa35d103b2714432bc24da9414f0ce45dd72c2bda7d4d3b75cc297e74",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://c83cb1e2cbef57088047f2bac83f009ad9df6374ddd20006c21634b06bedecf9",
+				"dweb:/ipfs/QmZmCMe4VhURM9aQxj86HrU28bckAtgk5MiJ3qh6dyaahi"
+			]
+		},
+		"contracts/test/Invariants.t.sol": {
+			"keccak256": "0x6c732116dcb1cb734478d8fc86acf459854acc8b89357b4b5725b5fb071ef906",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://0b1a6d8b0789f9b2363b71748bc09b99ee169d17cc63101a46bfc5c4d8dc347e",
+				"dweb:/ipfs/QmaEdjDtGYasrfduYjoMRzrNHStJgmohyjJEGnKASjYFzt"
+			]
+		},
+		"contracts/test/accounts/ERC20User.sol": {
+			"keccak256": "0x932c7160044eaea5905d6b0f3bfdc06ea5d5638e7bfda03408161e654a259ebf",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://110fa11fd06e0f22a9bf216676cddc9889474c653666134ea1e54987ad93df09",
+				"dweb:/ipfs/QmUFHNv4vQvS7pKN81xa29xZgvZoMBLumgBAJfpFY9L6w5"
+			]
+		},
+		"contracts/test/accounts/Owner.sol": {
+			"keccak256": "0xf945c2d36644acf29a4ce0a4ded92dbefdd6afd29b6f9ac2c058b40256f901e7",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://ddba381623edf0f816b3cbcd5b1d440207566b18727352e41a86706e0d9e9250",
+				"dweb:/ipfs/QmYZmLvvxVAK9MaVp1hvmPyrpEMPhWzMuv5HTWcJE1YvtH"
+			]
+		},
+		"contracts/test/accounts/Staker.sol": {
+			"keccak256": "0x15e81861790ed02aadf2a1260cafc0b0f6e7f83929c3b2d240a3d6d7bd383498",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://7b40d736d77525cb4c0f28b97b0bea4c8438224ad60eb1d6900b81f6209022fb",
+				"dweb:/ipfs/QmWciuTav48FHFU88CEmB6zrmWeKnhcBqsxHMtvAgRnTBX"
+			]
+		},
+		"contracts/test/accounts/Warper.sol": {
+			"keccak256": "0x7e42f9abb799827f37ee70086539f7f380f39e56c16fea1e3458a25650c439f2",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://ed3c3b1ed254bb4a8d6c5ec72600c19ea12fc048786bca3e8396854ce4fed011",
+				"dweb:/ipfs/QmaP6BbQbatRg6Kjak1msZffu5Er6evF6oKMWN8cYc2ACy"
+			]
+		},
+		"contracts/test/utils/MutableRDT.sol": {
+			"keccak256": "0x98975ee177a83e2ca38f29fd563f3d87dcd310edbff7b208739a80b3c1e7e1f0",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://98f91fcefd2728d40ea2788ddeb3dd7bfd8dc3851684c2c2a1691dd99181b2bf",
+				"dweb:/ipfs/QmXE2wygyp4N5kwpPf4E6TwoQcfNk7QVzwfoMuNLBsRnSz"
+			]
+		},
+		"modules/contract-test-utils/contracts/DSTest.sol": {
+			"keccak256": "0x0fb2487f8b91b17daaa7f5dd5732c8945e3a8cbcad5345010f1ffe33eec293f4",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://a4b319df1805c1e13d69656996b5f683e8f2da1007dc30367eaa8157e44e1175",
+				"dweb:/ipfs/QmUSKMrJQ9vzU8nJ3WLSvWA89hWMgsKE8bfyqGMYi5PtWe"
+			]
+		},
+		"modules/contract-test-utils/contracts/interfaces.sol": {
+			"keccak256": "0x761433d3b0b8f66cd8bb42eb4569938d2477b35443a32c3690c6fd28025419f0",
+			"license": "AGPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://6891341416acb3343479821675974ba852f4659feef062630e1c134a4006407c",
+				"dweb:/ipfs/QmZ6YjJHhJM6CziSanabB5nL2Xm3NCPUVuuJyeV7yqoeHY"
+			]
+		},
+		"modules/contract-test-utils/contracts/log.sol": {
+			"keccak256": "0xab6d058f97501c15ea42c3bf3064353272974540b2397807067bd764d8e251a5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://de901b8f3100370ab710c45b1530980088e8f5cb40819669c36172ec474ccd09",
+				"dweb:/ipfs/QmYh54NS9UfJsH6zyXzqXriVeTAbASQq5aY4DRr65agUhM"
+			]
+		},
+		"modules/contract-test-utils/contracts/test.sol": {
+			"keccak256": "0x1a407334919fdc3e1359cf006065d5571bf470913e6af126bdaca8f57c505f2f",
+			"license": "AGPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://c7bcb8cd219372235d4752d503eadb2a023079a4bed3cb58ce6306e0b3b0c3df",
+				"dweb:/ipfs/QmWj4YJJumn4ZzczYBwSdf7NGxsArnZPx5VCs8wYpuqK82"
+			]
+		},
+		"modules/erc20-helper/src/ERC20Helper.sol": {
+			"keccak256": "0x918391b8207bc62d665a1a9b961e9ee4e5c3407b8aafcb1fff4aa2d0b075934f",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://9f1ba6f499c85798c0fb0c4359ee2c13c27d708863ee9ccb80abe3aa59bbcadc",
+				"dweb:/ipfs/QmT2ZHVSMuc5hEDZD7EEhu5m3dgF5cMuUBc6rwjWgHRteQ"
+			]
+		},
+		"modules/erc20-helper/src/interfaces/IERC20Like.sol": {
+			"keccak256": "0xde8c26d922034e67479add16d9d318e7779080d9b79edb249372690b3a24b01d",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://993df2017058a75315160f27e1780a76ff631759deb1821b90f97e45e5ebf2f4",
+				"dweb:/ipfs/QmWngnokG6A5UGztXTKwAXRHEWP1tKqmSCf7a4ZeWV4MSG"
+			]
+		},
+		"modules/erc20/contracts/ERC20.sol": {
+			"keccak256": "0x9b14c4282c4207212ff141c1731673eea3d050928a19bfe665c42ebbb1acd8f0",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://da1df63858e59298e4f882b963e2d54d9886762edfd3c11122748cfc4cc23c09",
+				"dweb:/ipfs/QmU3Tys5sB6wa9FmDnY72qgBuMdGD2hkoSxuTCvnifPgYy"
+			]
+		},
+		"modules/erc20/contracts/interfaces/IERC20.sol": {
+			"keccak256": "0x3467fb0980a24c1a3ea54093029a9321e316ae22e5d70d6bd961fe6c44f15161",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://47d2e51f1b88b432d1372b2c36fc3dcadcc74f9854bcf1b5bf4f52e0f6418c21",
+				"dweb:/ipfs/QmVjadyhNCrEiSpZLQwJefPBwtweaFMZCLp9fDS56QprbP"
+			]
+		},
+		"modules/erc20/contracts/test/accounts/ERC20User.sol": {
+			"keccak256": "0x1b6668ce9cca38cfddb837266f3ce76120604abd7d39515104d56b1f4213789a",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://a904f8e89186538844fc4bc9b8089cd1e5e032297ccfd3b04bc4d773195eb95a",
+				"dweb:/ipfs/QmV1qoTm6oCor5VAnoEpR3DinJfsdX8rc93xDxHcEZdS9a"
+			]
+		},
+		"modules/erc20/contracts/test/mocks/MockERC20.sol": {
+			"keccak256": "0xee5ed3279bf87e786914c6256b0b6410a96514ddf676df5ba3184dbebfd9788a",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://6682a04abec5aea92e04c4ad9be889ecd39277573f596c74ad25c02374257a27",
+				"dweb:/ipfs/QmbmPBbtfPcKFLjVMNPV45LheWT3gxAb9AjQBfJnw32oge"
+			]
+		}
+	},
+	"version": 1
+}

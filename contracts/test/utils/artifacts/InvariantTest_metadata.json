@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "targetContracts",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "targetContracts_",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/test/utils/InvariantTest.sol": "InvariantTest"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/test/utils/InvariantTest.sol": {
+			"keccak256": "0xdde4ee39c30752b39e14712ae528d6f0feea4a5ae218168f998d2066c7662347",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://520ff4c0c16fbb0caae0a80abd584a9bb16da94192b21345c5aeaf782d154ec4",
+				"dweb:/ipfs/QmVrQmVARCowxUxWsw4FHLYVan6nuzA12edVTDCEQ8bsDJ"
+			]
+		}
+	},
+	"version": 1
+}

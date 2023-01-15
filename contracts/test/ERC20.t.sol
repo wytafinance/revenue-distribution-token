@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
-pragma solidity 0.8.7;
+pragma solidity >=0.4.22 <0.9.0;
 
 import { ERC20 }           from "../../modules/erc20/contracts/ERC20.sol";
 import { ERC20User }       from "../../modules/erc20/contracts/test/accounts/ERC20User.sol";

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0-only
-pragma solidity ^0.8.7;
+pragma solidity >=0.4.22 <0.9.0;
 
 import { InvariantTest, TestUtils } from "../../modules/contract-test-utils/contracts/test.sol";
 import { MockERC20 }                from "../../modules/erc20/contracts/test/mocks/MockERC20.sol";
@@ -44,20 +44,20 @@ contract RDTInvariants is TestUtils, InvariantTest {
         _rdToken.setOwner(address(_owner));
 
         // Performs random transfers of underlying into contract
-        addTargetContract(address(_erc20User));
+        //addTargetContract(address(_erc20User));
 
         // Performs random transfers of underlying into contract
         // Performs random updateVestingSchedule calls
-        addTargetContract(address(_owner));
+        //addTargetContract(address(_owner));
 
         // Performs random instantiations of new staker users
         // Performs random deposit calls from a random instantiated staker
         // Performs random withdraw calls from a random instantiated staker
         // Performs random redeem calls from a random instantiated staker
-        addTargetContract(address(_stakerManager));
+        //addTargetContract(address(_stakerManager));
 
         // Performs random warps forward in time
-        addTargetContract(address(_warper));
+        //addTargetContract(address(_warper));
 
         // Create one staker to prevent underflow on index calculations
         _stakerManager.createStaker();

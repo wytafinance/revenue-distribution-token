@@ -1,0 +1,1096 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner_",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "spender_",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount_",
+						"type": "uint256"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "caller_",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner_",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "assets_",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "shares_",
+						"type": "uint256"
+					}
+				],
+				"name": "Deposit",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner_",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "recipient_",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount_",
+						"type": "uint256"
+					}
+				],
+				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "caller_",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "receiver_",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner_",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "assets_",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "shares_",
+						"type": "uint256"
+					}
+				],
+				"name": "Withdraw",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "DOMAIN_SEPARATOR",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "domainSeparator_",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "PERMIT_TYPEHASH",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "permitTypehash_",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner_",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "spender_",
+						"type": "address"
+					}
+				],
+				"name": "allowance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "allowance_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender_",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount_",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success_",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "asset",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "asset_",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account_",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "balance_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares_",
+						"type": "uint256"
+					}
+				],
+				"name": "convertToAssets",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "assets_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "assets_",
+						"type": "uint256"
+					}
+				],
+				"name": "convertToShares",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "decimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "decimals_",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender_",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "subtractedAmount_",
+						"type": "uint256"
+					}
+				],
+				"name": "decreaseAllowance",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success_",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "assets_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "receiver_",
+						"type": "address"
+					}
+				],
+				"name": "deposit",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender_",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "addedAmount_",
+						"type": "uint256"
+					}
+				],
+				"name": "increaseAllowance",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success_",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "receiver_",
+						"type": "address"
+					}
+				],
+				"name": "maxDeposit",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "assets_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "receiver_",
+						"type": "address"
+					}
+				],
+				"name": "maxMint",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner_",
+						"type": "address"
+					}
+				],
+				"name": "maxRedeem",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner_",
+						"type": "address"
+					}
+				],
+				"name": "maxWithdraw",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "assets_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "receiver_",
+						"type": "address"
+					}
+				],
+				"name": "mint",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "assets_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name_",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner_",
+						"type": "address"
+					}
+				],
+				"name": "nonces",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "nonce_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner_",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "spender_",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "v_",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "r_",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "s_",
+						"type": "bytes32"
+					}
+				],
+				"name": "permit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "assets_",
+						"type": "uint256"
+					}
+				],
+				"name": "previewDeposit",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares_",
+						"type": "uint256"
+					}
+				],
+				"name": "previewMint",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "assets_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares_",
+						"type": "uint256"
+					}
+				],
+				"name": "previewRedeem",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "assets_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "assets_",
+						"type": "uint256"
+					}
+				],
+				"name": "previewWithdraw",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "receiver_",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "owner_",
+						"type": "address"
+					}
+				],
+				"name": "redeem",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "assets_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "symbol_",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalAssets",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "totalAssets_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "totalSupply_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "recipient_",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount_",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success_",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner_",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient_",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount_",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success_",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "assets_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "receiver_",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "owner_",
+						"type": "address"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"events": {
+				"Deposit(address,address,uint256,uint256)": {
+					"details": "`caller_` has exchanged `assets_` for `shares_` and transferred them to `owner_`.         MUST be emitted when assets are deposited via the `deposit` or `mint` methods.",
+					"params": {
+						"assets_": "The amount of assets deposited.",
+						"caller_": "The caller of the function that emitted the `Deposit` event.",
+						"owner_": "The owner of the shares.",
+						"shares_": "The amount of shares minted."
+					}
+				},
+				"Withdraw(address,address,address,uint256,uint256)": {
+					"details": "`caller_` has exchanged `shares_`, owned by `owner_`, for `assets_`, and transferred them to `receiver_`.         MUST be emitted when assets are withdrawn via the `withdraw` or `redeem` methods.",
+					"params": {
+						"assets_": "The amount of assets withdrawn.",
+						"caller_": "The caller of the function that emitted the `Withdraw` event.",
+						"owner_": "The owner of the shares.",
+						"receiver_": "The receiver of the assets.",
+						"shares_": "The amount of shares burned."
+					}
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"DOMAIN_SEPARATOR()": {
+					"details": "Returns the signature domain separator.",
+					"returns": {
+						"domainSeparator_": "The signature domain separator."
+					}
+				},
+				"PERMIT_TYPEHASH()": {
+					"details": "Returns the permit type hash.",
+					"returns": {
+						"permitTypehash_": "The permit type hash."
+					}
+				},
+				"allowance(address,address)": {
+					"details": "Returns the allowance that one account has given another over their tokens.",
+					"params": {
+						"owner_": "Account that tokens are approved from.",
+						"spender_": "Account that tokens are approved for."
+					},
+					"returns": {
+						"allowance_": "Allowance that one account has given another over their tokens."
+					}
+				},
+				"approve(address,uint256)": {
+					"details": "Function that allows one account to set the allowance of another account over their tokens.          Emits an {Approval} event.",
+					"params": {
+						"amount_": "Amount of tokens that have been approved.",
+						"spender_": "Account that tokens are approved for."
+					},
+					"returns": {
+						"success_": "Boolean indicating whether the operation succeeded."
+					}
+				},
+				"asset()": {
+					"details": "The address of the underlying asset used by the Vault.          MUST be a contract that implements the ERC-20 standard.          MUST NOT revert.",
+					"returns": {
+						"asset_": "The address of the underlying asset."
+					}
+				},
+				"balanceOf(address)": {
+					"details": "Returns the amount of tokens owned by a given account.",
+					"params": {
+						"account_": "Account that owns the tokens."
+					},
+					"returns": {
+						"balance_": "Amount of tokens owned by a given account."
+					}
+				},
+				"convertToAssets(uint256)": {
+					"details": "The amount of `assets_` the `shares_` are currently equivalent to.          MUST NOT be inclusive of any fees that are charged against assets in the Vault.          MUST NOT reflect slippage or other on-chain conditions when performing the actual exchange.          MUST NOT show any variations depending on the caller.          MUST NOT revert.",
+					"params": {
+						"shares_": "The amount of shares to convert."
+					},
+					"returns": {
+						"assets_": "The amount of equivalent assets."
+					}
+				},
+				"convertToShares(uint256)": {
+					"details": "The amount of `shares_` the `assets_` are currently equivalent to.          MUST NOT be inclusive of any fees that are charged against assets in the Vault.          MUST NOT reflect slippage or other on-chain conditions when performing the actual exchange.          MUST NOT show any variations depending on the caller.          MUST NOT revert.",
+					"params": {
+						"assets_": "The amount of assets to convert."
+					},
+					"returns": {
+						"shares_": "The amount of equivalent shares."
+					}
+				},
+				"decimals()": {
+					"details": "Returns the decimal precision used by the token.",
+					"returns": {
+						"decimals_": "The decimal precision used by the token."
+					}
+				},
+				"decreaseAllowance(address,uint256)": {
+					"details": "Function that allows one account to decrease the allowance of another account over their tokens.          Emits an {Approval} event.",
+					"params": {
+						"spender_": "Account that tokens are approved for.",
+						"subtractedAmount_": "Amount to decrease approval by."
+					},
+					"returns": {
+						"success_": "         Boolean indicating whether the operation succeeded."
+					}
+				},
+				"deposit(uint256,address)": {
+					"details": "Mints `shares_` to `receiver_` by depositing `assets_` into the Vault.          MUST emit the {Deposit} event.          MUST revert if all of the assets cannot be deposited (due to insufficient approval, deposit limits, slippage, etc).",
+					"params": {
+						"assets_": "The amount of assets to deposit.",
+						"receiver_": "The receiver of the shares."
+					},
+					"returns": {
+						"shares_": "  The amount of shares minted."
+					}
+				},
+				"increaseAllowance(address,uint256)": {
+					"details": "Function that allows one account to increase the allowance of another account over their tokens.          Emits an {Approval} event.",
+					"params": {
+						"addedAmount_": "Amount to increase approval by.",
+						"spender_": "Account that tokens are approved for."
+					},
+					"returns": {
+						"success_": "    Boolean indicating whether the operation succeeded."
+					}
+				},
+				"maxDeposit(address)": {
+					"details": "Maximum amount of `assets_` that can be deposited on behalf of the `receiver_` through a `deposit` call.          MUST return a limited value if the receiver is subject to any limits, or the maximum value otherwise.          MUST NOT revert.",
+					"params": {
+						"receiver_": "The receiver of the assets."
+					},
+					"returns": {
+						"assets_": "  The maximum amount of assets that can be deposited."
+					}
+				},
+				"maxMint(address)": {
+					"details": "Maximum amount of `shares_` that can be minted on behalf of the `receiver_` through a `mint` call.          MUST return a limited value if the receiver is subject to any limits, or the maximum value otherwise.          MUST NOT revert.",
+					"params": {
+						"receiver_": "The receiver of the shares."
+					},
+					"returns": {
+						"shares_": "  The maximum amount of shares that can be minted."
+					}
+				},
+				"maxRedeem(address)": {
+					"details": "Maximum amount of `shares_` that can be redeemed from the `owner_` through a `redeem` call.          MUST return a limited value if the owner is subject to any limits, or the total amount of owned shares otherwise.          MUST NOT revert.",
+					"params": {
+						"owner_": "The owner of the shares."
+					},
+					"returns": {
+						"shares_": "The maximum amount of shares that can be redeemed."
+					}
+				},
+				"maxWithdraw(address)": {
+					"details": "Maximum amount of `assets_` that can be withdrawn from the `owner_` through a `withdraw` call.          MUST return a limited value if the owner is subject to any limits, or the total amount of owned assets otherwise.          MUST NOT revert.",
+					"params": {
+						"owner_": "The owner of the assets."
+					},
+					"returns": {
+						"assets_": "The maximum amount of assets that can be withdrawn."
+					}
+				},
+				"mint(uint256,address)": {
+					"details": "Mints `shares_` to `receiver_` by depositing `assets_` into the Vault.          MUST emit the {Deposit} event.          MUST revert if all of shares cannot be minted (due to insufficient approval, deposit limits, slippage, etc).",
+					"params": {
+						"receiver_": "The receiver of the shares.",
+						"shares_": "The amount of shares to mint."
+					},
+					"returns": {
+						"assets_": "  The amount of assets deposited."
+					}
+				},
+				"name()": {
+					"details": "Returns the name of the token.",
+					"returns": {
+						"name_": "The name of the token."
+					}
+				},
+				"nonces(address)": {
+					"details": "Returns the nonce for the given owner.",
+					"params": {
+						"owner_": "The address of the owner account."
+					},
+					"returns": {
+						"nonce_": "The nonce for the given owner."
+					}
+				},
+				"permit(address,address,uint256,uint256,uint8,bytes32,bytes32)": {
+					"details": "Approve by signature.",
+					"params": {
+						"amount_": "Permit approval spend limit.",
+						"deadline_": "Deadline after which the permit is invalid.",
+						"owner_": "Owner address that signed the permit.",
+						"r_": "ECDSA signature r component.",
+						"s_": "ECDSA signature s component.",
+						"spender_": "Spender of the permit.",
+						"v_": "ECDSA signature v component."
+					}
+				},
+				"previewDeposit(uint256)": {
+					"details": "Allows an on-chain or off-chain user to simulate the effects of their deposit at the current block, given current on-chain conditions.          MUST return as close to and no more than the exact amount of shares that would be minted in a `deposit` call in the same transaction.          MUST NOT account for deposit limits like those returned from `maxDeposit` and should always act as though the deposit would be accepted.          MUST NOT revert.",
+					"params": {
+						"assets_": "The amount of assets to deposit."
+					},
+					"returns": {
+						"shares_": "The amount of shares that would be minted."
+					}
+				},
+				"previewMint(uint256)": {
+					"details": "Allows an on-chain or off-chain user to simulate the effects of their mint at the current block, given current on-chain conditions.          MUST return as close to and no fewer than the exact amount of assets that would be deposited in a `mint` call in the same transaction.          MUST NOT account for mint limits like those returned from `maxMint` and should always act as though the minting would be accepted.          MUST NOT revert.",
+					"params": {
+						"shares_": "The amount of shares to mint."
+					},
+					"returns": {
+						"assets_": "The amount of assets that would be deposited."
+					}
+				},
+				"previewRedeem(uint256)": {
+					"details": "Allows an on-chain or off-chain user to simulate the effects of their redemption at the current block, given current on-chain conditions.          MUST return as close to and no more than the exact amount of assets that would be withdrawn in a `redeem` call in the same transaction.          MUST NOT account for redemption limits like those returned from `maxRedeem` and should always act as though the redemption would be accepted.          MUST NOT revert.",
+					"params": {
+						"shares_": "The amount of shares to redeem."
+					},
+					"returns": {
+						"assets_": "The amount of assets that would be withdrawn."
+					}
+				},
+				"previewWithdraw(uint256)": {
+					"details": "Allows an on-chain or off-chain user to simulate the effects of their withdrawal at the current block, given current on-chain conditions.          MUST return as close to and no fewer than the exact amount of shares that would be burned in a `withdraw` call in the same transaction.          MUST NOT account for withdrawal limits like those returned from `maxWithdraw` and should always act as though the withdrawal would be accepted.          MUST NOT revert.",
+					"params": {
+						"assets_": "The amount of assets to withdraw."
+					},
+					"returns": {
+						"shares_": "The amount of shares that would be redeemed."
+					}
+				},
+				"redeem(uint256,address,address)": {
+					"details": "Burns `shares_` from `owner_` and sends `assets_` to `receiver_`.          MUST emit the {Withdraw} event.          MUST revert if all of the shares cannot be redeemed (due to insufficient shares, withdrawal limits, slippage, etc).",
+					"params": {
+						"owner_": "The owner of the shares.",
+						"receiver_": "The receiver of the assets.",
+						"shares_": "The amount of shares to redeem."
+					},
+					"returns": {
+						"assets_": "  The amount of assets sent to the receiver."
+					}
+				},
+				"symbol()": {
+					"details": "Returns the symbol of the token.",
+					"returns": {
+						"symbol_": "The symbol of the token."
+					}
+				},
+				"totalAssets()": {
+					"details": "Total amount of the underlying asset that is managed by the Vault.          SHOULD include compounding that occurs from any yields.          MUST NOT revert.",
+					"returns": {
+						"totalAssets_": "The total amount of assets the Vault manages."
+					}
+				},
+				"totalSupply()": {
+					"details": "Returns the total amount of tokens in existence.",
+					"returns": {
+						"totalSupply_": "The total amount of tokens in existence."
+					}
+				},
+				"transfer(address,uint256)": {
+					"details": "Moves an amount of tokens from `msg.sender` to a specified account.          Emits a {Transfer} event.",
+					"params": {
+						"amount_": "Amount of tokens that are transferred.",
+						"recipient_": "Account that receives tokens."
+					},
+					"returns": {
+						"success_": "  Boolean indicating whether the operation succeeded."
+					}
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "Moves a pre-approved amount of tokens from a sender to a specified account.          Emits a {Transfer} event.          Emits an {Approval} event.",
+					"params": {
+						"amount_": "Amount of tokens that are transferred.",
+						"owner_": "Account that tokens are moving from.",
+						"recipient_": "Account that receives tokens."
+					},
+					"returns": {
+						"success_": "  Boolean indicating whether the operation succeeded."
+					}
+				},
+				"withdraw(uint256,address,address)": {
+					"details": "Burns `shares_` from `owner_` and sends `assets_` to `receiver_`.          MUST emit the {Withdraw} event.          MUST revert if all of the assets cannot be withdrawn (due to insufficient assets, withdrawal limits, slippage, etc).",
+					"params": {
+						"assets_": "The amount of assets to withdraw.",
+						"owner_": "The owner of the assets.",
+						"receiver_": "The receiver of the assets."
+					},
+					"returns": {
+						"shares_": "  The amount of shares burned from the owner."
+					}
+				}
+			},
+			"title": "A standard for tokenized Vaults with a single underlying ERC-20 token.",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interfaces/IERC4626.sol": "IERC4626"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interfaces/IERC4626.sol": {
+			"keccak256": "0xda8327c5dacee8c853be870f3fc90c67e7351b242ca7317073d83032f034d8ed",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://fac8e65a2c903fe0e5f5b137166535d7908b81978c05457149c6bfbbb10a2120",
+				"dweb:/ipfs/QmSzcsy5PvbjNSzi6npx5vSXWwhvne2vZVgYZLmhcBWq4v"
+			]
+		},
+		"modules/erc20/contracts/interfaces/IERC20.sol": {
+			"keccak256": "0x3467fb0980a24c1a3ea54093029a9321e316ae22e5d70d6bd961fe6c44f15161",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://47d2e51f1b88b432d1372b2c36fc3dcadcc74f9854bcf1b5bf4f52e0f6418c21",
+				"dweb:/ipfs/QmVjadyhNCrEiSpZLQwJefPBwtweaFMZCLp9fDS56QprbP"
+			]
+		}
+	},
+	"version": 1
+}
